@@ -1,6 +1,5 @@
 resource "aws_iam_role" "this" {
   name = "prashansa_iam_role"
-
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -25,6 +24,6 @@ resource "aws_iam_role_policy_attachment" "role_policy_attachment_SSM" {
 }
 
 resource "aws_iam_instance_profile" "this" {
-  name = "prashansa_iam_role_instance"
+  name = "prashansa_iam_instance_profile"
   role = aws_iam_role.this.name
 }
