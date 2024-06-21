@@ -119,7 +119,7 @@ jobs:
           working-directory: ansible
           env:
             ANSIBLE_HOST_KEY_CHECKING: false
-######################################################
+            
 
     upload-to-s3:
         runs-on: ubuntu-latest
@@ -144,4 +144,3 @@ jobs:
             
           - name: Add ansible file to s3
             run: aws s3 cp ansible/ s3://prashansa-s3-bucket  --recursive
-          
