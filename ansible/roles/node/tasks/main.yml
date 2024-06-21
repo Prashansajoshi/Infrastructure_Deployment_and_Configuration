@@ -65,5 +65,3 @@
 
   - name: Save pm2 process list to start on boot
     command: pm2 save
-
-    ############
