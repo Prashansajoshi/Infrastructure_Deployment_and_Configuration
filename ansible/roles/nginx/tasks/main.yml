@@ -18,3 +18,8 @@
     dest: /etc/nginx/sites-enabled/node
     state: link  #This specifies that the file module should create a symbolic link rather than a regular file.
 
+
+- name: Remove default Nginx configuration
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
