@@ -53,6 +53,21 @@
   #   command: pm2 delete frontend backend
   #   ignore_errors: yes
 
+  - name: Build frontend
+    command: npm run build
+    args:
+      chdir: /home/ubuntu/Node_Project/frontend
+
+  - name: Ensure /var/www/html exists
+    file:
+      path: /var/www/html
+      state: directory
+      mode: '0755'
+
+  # - name: Copy to var/www/html
+  #   command: cp -r /home/ubuntu/Node_Project/frontend/dist /var/www/html
+
+
   - name: Start frontend server with pm2
     command: pm2 start npm --name frontend -- run dev
     args:
