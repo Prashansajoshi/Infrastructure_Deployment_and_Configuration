@@ -7,6 +7,6 @@
 - name: Nginx configuration
   template:
     src: nginx.j2
-    dest: /etc/nginx/sites-available/nodejs
+    dest: /etc/nginx/sites-available/node
   notify : 
     - Reload Nginx
