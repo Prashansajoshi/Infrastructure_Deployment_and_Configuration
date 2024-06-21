@@ -31,8 +31,9 @@
       upgrade: dist
 
   roles: 
-    # - nginx
+    
     - git
+    - nginx
     - node
     - mysql
 
