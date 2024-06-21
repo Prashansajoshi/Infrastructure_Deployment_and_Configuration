@@ -1,4 +1,4 @@
-name: destroy_github_action_to_ec2
+name: destroy_terraform_github_action
 on:
   workflow_dispatch:
 jobs:
