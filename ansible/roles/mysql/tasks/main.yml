@@ -31,7 +31,7 @@
         state: present
       when: not db_exists.changed
 
-
+#################
     # - name: Check if database is empty
     #   command: mysql -u root -p{{ DB_PASSWORD }} -e "USE {{ DB_NAME }}; SHOW TABLES;"
     #   register: db_tables
