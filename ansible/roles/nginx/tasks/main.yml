@@ -10,3 +10,11 @@
     dest: /etc/nginx/sites-available/node
   notify : 
     - Reload Nginx
+
+
+- name: Enable Nginx site configuration
+  file:
+    src: /etc/nginx/sites-available/node
+    dest: /etc/nginx/sites-enabled/node
+    state: link  #This specifies that the file module should create a symbolic link rather than a regular file.
+
