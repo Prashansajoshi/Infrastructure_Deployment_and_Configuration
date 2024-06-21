@@ -19,7 +19,7 @@
     copy:
       dest: /home/ubuntu/Node_Project/frontend/.env
       content: |
-        VITE_API_URL=http://54.236.46.163:3000
+        VITE_API_URL=http://54.87.39.218:3000
     
   - name: Ensure Node.js is installed
     apt:
