@@ -5,6 +5,7 @@
         update_cache: yes
       loop:
         - mysql-server
+        - mysql-client
         - python3-mysqldb
         - libmysqlclient-dev
 
