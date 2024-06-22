@@ -54,7 +54,7 @@
   #   ignore_errors: yes
 
   - name: Build frontend
-    command: npm run build
+    command: npm run build -vvv
     args:
       chdir: /home/ubuntu/Node_Project/frontend
 
