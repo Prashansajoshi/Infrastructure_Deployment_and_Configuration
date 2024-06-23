@@ -58,11 +58,11 @@
     args:
       chdir: /home/ubuntu/Node_Project/frontend
 
-  # - name: Ensure /var/www/html exists
-  #   file:
-  #     path: /var/www/html
-  #     state: directory
-  #     mode: '0755'
+  - name: Ensure /var/www/html exists
+    file:
+      path: /var/www/html
+      state: directory
+      mode: '0755'
 
   # - name: Copy to var/www/html
   #   command: cp -r /home/ubuntu/Node_Project/frontend/dist /var/www/html
