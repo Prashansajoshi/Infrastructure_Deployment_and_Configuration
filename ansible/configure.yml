@@ -20,6 +20,11 @@
     DB_NAME: test_db
     DB_PORT: 3306
 
+    local_dir: /home/ubuntu/Node_Project/frontend/dist
+    bucket: prashansa-s3-bucket
+    s3_prefix: dist
+    region: us-east-1
+
   tasks:
   - name: Update && Updgrade
     apt:
