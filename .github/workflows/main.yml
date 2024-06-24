@@ -145,3 +145,26 @@ jobs:
           - name: Upload dist folder to S3
             run: aws s3 cp Node_project/frontend/dist s3://prashansa-s3-bucket/dist --recursive
         
+
+          - name: Copy dist folder from S3 to EC2
+          run: |
+            INSTANCE_ID="your-ec2-instance-id"
+            BUCKET_NAME="prashansa-s3-bucket"
+            DESTINATION_DIR="/path/to/deployment/dist"
+
+            aws ssm send-command \
+              --instance-ids $INSTANCE_ID \
+              --document-name "AWS-RunShellScript" \
+              --comment "Copy dist folder from S3 to EC2" \
+              --parameters commands="#!/bin/bash
+                if [ -d \"$DESTINATION_DIR\" ]; then
+                  echo \"Directory $DESTINATION_DIR exists. Deleting it...\"
+                  rm -rf \"$DESTINATION_DIR\"
+                else
+                  echo \"Directory $DESTINATION_DIR does not exist.\"
+                fi
+                mkdir -p \"$DESTINATION_DIR\"
+                echo \"Copying dist folder from S3 to $DESTINATION_DIR...\"
+                aws s3 cp s3://$BUCKET_NAME/dist \"$DESTINATION_DIR\" --recursive
+                echo \"Copy complete.\""
+              --timeout-seconds 600
