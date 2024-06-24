@@ -67,7 +67,6 @@
   - name: Copy to var/www/html
     command: cp -r /home/ubuntu/Node_Project/frontend/dist /var/www/html
 
-
   - name: Start frontend server with pm2
     command: pm2 start npm --name frontend -- run dev
     args:
