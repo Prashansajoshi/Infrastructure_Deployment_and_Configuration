@@ -102,7 +102,7 @@ jobs:
         run : pip3 install boto3 botocore
 
       - name: Upload frontend to S3
-        run: aws s3 cp dist s3://prashansa-s3-bucket-/dist --recursive
+        run: aws s3 cp dist s3://prashansa-s3-bucket/dist --recursive
         working-directory: frontend
 
       - name: Upload backend and db.sql to S3
