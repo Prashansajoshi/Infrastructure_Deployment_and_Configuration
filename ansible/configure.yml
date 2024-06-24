@@ -14,7 +14,7 @@
     ansible_aws_ssm_s3_addressing_style: virtual
     ssm_timeout: 3600
     
-    DB_SERVER: localhost
+    DB_SERVER: terraform-20240621052304131800000002.cmuokqciitb8.us-east-1.rds.amazonaws.com
     DB_USERNAME: test_user
     DB_PASSWORD: test_0000
     DB_NAME: test_db
