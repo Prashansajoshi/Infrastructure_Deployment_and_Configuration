@@ -24,6 +24,7 @@
     bucket: prashansa-s3-bucket
     s3_prefix: dist
     region: us-east-1
+    instance_id: 
 
   tasks:
   - name: Update && Updgrade
