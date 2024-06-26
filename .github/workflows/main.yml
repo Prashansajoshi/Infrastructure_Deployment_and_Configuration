@@ -181,7 +181,6 @@ jobs:
 
       - name: Upload frontend to S3
         run: aws s3 cp dist s3://prashansa-s3-bucket/dist --recursive
-        working-directory: frontend
 
       - name: send backend and db.sql to S3
         run: aws s3 cp backend_db.zip s3://prashansa-s3-bucket/backend_db.zip
