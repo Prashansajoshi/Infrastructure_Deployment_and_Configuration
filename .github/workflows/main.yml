@@ -160,7 +160,7 @@ jobs:
 
       - name: Build frontend
         run: npm run build
-        working-directory: frontend
+        working-directory: Node_project/frontend
 
       - name: Ensure boto3 and botocore modules are installed
         run : pip3 install boto3 botocore
