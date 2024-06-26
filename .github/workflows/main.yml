@@ -179,7 +179,7 @@ jobs:
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           aws-region: us-east-1
 
-      - name: Upload frontend to S3
+      - name: Upload frontend to S3 #####
         run: aws s3 cp dist s3://prashansa-s3-bucket/dist --recursive
 
       - name: send backend and db.sql to S3
