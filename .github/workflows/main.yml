@@ -163,6 +163,10 @@ jobs:
         run: npm run build
         working-directory: frontend
 
+      - name: Ensure dist folder exists
+        run: pwd
+        working-directory: frontend
+
       - name: Ensure boto3 and botocore modules are installed
         run : pip3 install boto3 botocore
 
