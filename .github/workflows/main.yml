@@ -46,13 +46,13 @@ jobs:
         run: terraform plan
         working-directory: terraform
 
-      - name: Terraform destroy
-        run: terraform apply -auto-approve
-        working-directory: terraform 
+      # - name: Terraform apply
+      #   run: terraform apply -auto-approve
+      #   working-directory: terraform 
 
-      # - name: Terraform Destroy
-      #   run: terraform destroy
-      #   working-directory: terraform
+      - name: Terraform Destroy
+        run: terraform destroy
+        working-directory: terraform
 
     # setup_ansible:
         # runs-on: ubuntu-latest
