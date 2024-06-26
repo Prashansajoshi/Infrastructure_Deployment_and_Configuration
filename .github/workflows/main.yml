@@ -160,7 +160,7 @@ jobs:
 
       - name: Build frontend
         run: npm run build
-        working-directory: Node_project/frontend
+        working-directory: frontend
 
       - name: Ensure boto3 and botocore modules are installed
         run : pip3 install boto3 botocore
@@ -169,7 +169,8 @@ jobs:
         run: aws s3 cp dist s3://prashansa-s3-bucket/dist --recursive
 
       - name: send backend and db.sql to S3
-        run: a
+        run: aws s3 cp backend_db.zip s3://prashansa-s3-bucket/backend_db.zip
+
 
 
     # upload_to_s3:
